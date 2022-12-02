@@ -1,0 +1,28 @@
+{% extends "AppProductos/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+
+   camada: {{camada}}
+   <br>
+   producto :
+   {% for producto in productos %}
+        {{producto.nombre}}
+        {{producto.categoria}}
+        <br>
+   <br>
+   cliente :
+   {% for cliente in clientes %}
+        {{usuario.nombre}}
+        {{fecha_alta.fecha}}
+        <br>
+   stock :
+   {% for stock in stock %}
+        {{precio.valor}}
+        {{stock.cantidad}}
+        <br>          
+    {%endfor%}    
+
+{% endblock %}

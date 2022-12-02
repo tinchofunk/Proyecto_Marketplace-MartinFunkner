@@ -1,0 +1,25 @@
+{% extends "AppProductos/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+
+    <!--Aquí va lo que cambia, y lo asociado a está vista :) -->
+    <h1>clientes</h1>
+    <p>Datos de los clientes</p>
+
+    <p> 
+        Ingrese Nombre y fecha de alta del cliente
+    </p>
+    Ingresar un producto:
+    <br>
+    <form action=""    method="post">{% csrf_token %}
+        <table>
+            {{miFormulario.as_table}}
+        </table>
+        <input type="submit",value="Enviar">
+     </form>
+
+
+{% endblock %}
